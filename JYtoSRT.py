@@ -121,7 +121,8 @@ def main():
 		print('序号输入错误，程序结束')
 		return
 	print(inputTitleIndex)
-	subtitleDic = subtitleDicList[inputTitleIndex]
+	print(len(subtitleDicList))
+	subtitleDic = subtitleDicList[inputTitleIndex-1]
 	subtitleStr = createSrt(subtitleDic)
 	subtitleTxt = createTxt(subtitleDic)
 	
@@ -133,6 +134,6 @@ def main():
 	writeFile(srtTitle,subtitleStr)
 	print('saved ' + txtTitle)
 	writeFile(txtTitle,subtitleTxt)
-	
+
 if __name__=="__main__":
 	main()
